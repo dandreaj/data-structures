@@ -21,11 +21,11 @@ var Queue = function() {
 
   someInstance.dequeue = function() {
     if(size > 0) {
-      var popped_item = storage[first];
+      var poppedItem = storage[first];
       delete storage[first];
       first++;
       size--;
-      return popped_item;
+      return poppedItem;
     }
   };
 

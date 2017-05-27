@@ -19,8 +19,12 @@ Stack.prototype.push = function(value) {
 Stack.prototype.pop = function() {
   if (this.count > 0) {
     this.count--;
-    var popped_item = this.storage[this.count];
+    var poppedItem = this.storage[this.count];
     delete this.storage[this.count];
-    return popped_item;
+    return poppedItem;
   }
 };
+
+
+var newVar = new Stack();
+newVar.push();
