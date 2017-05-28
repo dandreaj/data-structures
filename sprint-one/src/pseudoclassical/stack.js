@@ -27,4 +27,3 @@ Stack.prototype.pop = function() {
 
 
 var newVar = new Stack();
-newVar.push();
