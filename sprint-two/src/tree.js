@@ -12,10 +12,21 @@ var treeMethods = {};
 
 treeMethods.addChild = function(value) {
   var child = new Tree(value);
-  parent.children.push(child); //Who is this child's parent?!
+  this.children.push(child);
 };
 
 treeMethods.contains = function(target) {
+
+  var containsFunction = function(node){
+    console.log(node);
+    if(node.value === target){
+      return true;
+    }
+    for(var i =0;i<node.children.length;i++){
+      containsFunction(node.children[i].value);
+    }
+  };
+  containsFunction(this);
 };
 
 
