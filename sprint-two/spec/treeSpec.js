@@ -26,6 +26,13 @@ describe('tree', function() {
     expect(tree.contains(6)).to.equal(false);
   });
 
+  //ADDED TEST
+  it('should return false for a value that was removed', function() {
+    tree.addChild(5);
+    tree.removeChild(0);
+    expect(tree.contains(5)).to.equal(false);
+  });
+
   it('should be able to add children to a tree\'s child', function() {
     tree.addChild(5);
     tree.children[0].addChild(6);
