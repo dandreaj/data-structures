@@ -14,7 +14,7 @@ var HashTable = function() {
 ];
 
 */
-
+//Time Complexity: O(1)
 HashTable.prototype.insert = function(k, v) {
   var index = getIndexBelowMaxForKey(k, this._limit);
   var bucket = this._storage.get(index);
@@ -32,6 +32,7 @@ HashTable.prototype.insert = function(k, v) {
   }
 };
 
+//Time Complexity: O(1)
 HashTable.prototype.retrieve = function(k) {
   var index = getIndexBelowMaxForKey(k, this._limit);
   var bucket = this._storage.get(index);
@@ -43,6 +44,7 @@ HashTable.prototype.retrieve = function(k) {
 
 };
 
+//Time Complexity: O(1)
 HashTable.prototype.remove = function(k) {
   var index = getIndexBelowMaxForKey(k, this._limit);
   var bucket = this._storage.get(index);

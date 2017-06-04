@@ -35,7 +35,7 @@ describe('linkedList', function() {
     linkedList.addToTail(4);
     expect(linkedList.removeHead()).to.equal(4);
   });
-
+  //if one node, the head and tail should be
   //NEW TEST
   it('should designate a new head when head is removed', function() {
     linkedList.addToTail(4);

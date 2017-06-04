@@ -34,6 +34,11 @@ describe('hashTable', function() {
     hashTable.remove('Steven');
     expect(hashTable.retrieve('Steven')).to.equal(undefined);
   });
+  //ADDED TEST
+  it('should generate same key for same index', function() {
+    var expectedIndex = getIndexBelowMaxForKey("Yassi",5);
+    expect(getIndexBelowMaxForKey("Yassi",5)).to.equal(expectedIndex);
+  });
 
   it('should handle hash function collisions', function() {
     var v1 = 'val1';

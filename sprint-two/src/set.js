@@ -6,10 +6,14 @@ var Set = function() {
 
 var setPrototype = {};
 
+//Time Complexity: O(1)
 setPrototype.add = function(item) {
-  this._storage.push(item);
+  if(!this.contains(item)){
+    this._storage.push(item);
+  }
 };
 
+//Time Complexity: O(n)
 setPrototype.contains = function(item) {
   for(var i=0; i<this._storage.length; i++) {
     if(this._storage[i] === item){
@@ -19,6 +23,7 @@ setPrototype.contains = function(item) {
   return false;
 };
 
+//Time Complexity: O(n)
 setPrototype.remove = function(item) {
   for(var i=0; i<this._storage.length; i++) {
     if(this._storage[i] === item) {

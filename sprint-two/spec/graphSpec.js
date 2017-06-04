@@ -20,6 +20,14 @@ describe('graph', function() {
     expect(graph.contains(1)).to.equal(true);
   });
 
+  //ADDED TEST
+  it('should be able to handle numbers and strings', function() {
+    graph.addNode('Yassi');
+    graph.addNode(7);
+    expect(graph.contains('Yassi')).to.equal(true);
+    expect(graph.contains(7)).to.equal(true);
+  });
+
   it('should remove nodes that were inserted', function() {
     graph.addNode(2);
     expect(graph.contains(2)).to.equal(true);

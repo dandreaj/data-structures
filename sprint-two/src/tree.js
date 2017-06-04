@@ -12,14 +12,18 @@ var Tree = function(value) {
 
 var treeMethods = {};
 
+//Time Complexity: O(1)
 treeMethods.addChild = function(value) {
  var child = new Tree(value); //Do we need new?
  this.children.push(child);
 };
 
+//Time Complexity: O(1)
 treeMethods.removeChild = function(index) {
   this.children.splice(index,1);
 };
+
+//Time Complexity: O(n)
 treeMethods.contains = function(target) {
     if (this.value === target){
         return true;
